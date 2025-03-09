@@ -1,0 +1,110 @@
+body {
+    background: url('image/background.jpg') no-repeat center;
+    background-size: cover; /* 確保背景填滿 */
+    background-attachment: fixed; /* 背景不會隨滾動變動 */
+    color: rgb(255, 255, 255);
+    font-family: monospace;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* 設定 100vh，避免超出畫面 */
+    width: 100vw;
+    position: relative; /* 讓內部內容 z-index 可用 */
+    overflow: hidden; /* 隱藏滾動條 */
+    margin: 0;
+    padding: 0;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* 以下加入兩行自訂色彩半透明遮罩，讓內容更清晰 */
+    background: rgba(39, 1, 141, 0.7);
+    /* background:hsla(239, 30%, 38%, 0.55); */
+    z-index: 0;
+}
+
+.watch-container {
+    position: relative;
+    width: 300px;
+    height: 100px;
+}
+
+.error-screen {
+    position: absolute;
+    top: 35%;
+    left: 51%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.error-text {
+    font-size: 45px;
+    line-height: 0.9;
+    text-align: center;
+    margin-bottom: -30px;
+    color: #fcfcfc;
+    text-shadow: 3px 3px 100px #ffffffb3;
+    /* 以下引入Google Fonts的字體樣式"Doto" */
+    font-family: "Doto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    font-variation-settings: "ROND" 0;
+}
+
+.blink {
+    animation: blink-animation 1s steps(2, start) infinite;
+}
+
+@keyframes blink-animation {
+    50% {
+        opacity: 0;
+    }
+}
+
+.buttons {
+    margin-top: 45px;
+    text-align: center;
+    border-radius: 50px;
+    /* 以下引入Google Fonts的字體樣式"Doto" */
+    font-family: "Doto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-size: 15px;
+    font-style: normal;
+    font-variation-settings: "ROND" 0;
+}
+
+.btn {
+    margin-top: -10px;
+    background: none;
+    border: 1px solid white;
+    color: #6bef2ed7;
+    padding: 5px 10px;
+    font-size: 15px;
+    cursor: pointer;
+    /* 以下引入Google Fonts的字體樣式"Doto" */
+    font-family: "Doto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-variation-settings: "ROND" 0;
+    border-radius: 10px; /* 調整圓角的大小 */
+}
+
+.btn:hover {
+    background: #6bef2ed7;
+    color: black;
+}

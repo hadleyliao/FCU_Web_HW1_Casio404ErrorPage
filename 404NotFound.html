@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 ERROR PAGE</title>
+  <!-- 以下引入 Google Fonts 的字體樣式"Doto" -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Doto:wght@800&display=swap" rel="stylesheet">
+  <!-- 以下引入外部 CSS 樣式表 -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="watch-container">
+  <div class="error-screen">
+    <p class="error-text"><span class="blink">4:04</span></p>
+    <p class="error-text"><span class="blink">Not Found</span></p>
+    <div class="buttons">
+      <p>MODE : <button class="btn" onclick="reloadPage()">☹︎ Error ☹</button></p>
+      <p>ADJEST : <button class="btn" onclick="gotoCasio()">► Restart ◄</button></p>
+    </div>
+  </div>
+</div>
+
+<script>
+  function reloadPage() {
+    window.location.reload();
+  }
+  function gotoCasio() {
+    window.location.href = 'https://www.casio.com/tw/';
+  }
+</script>
+</body>
+
+</html>
