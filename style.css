@@ -108,3 +108,50 @@ body::before {
     background: #6bef2ed7;
     color: black;
 }
+
+/* ========== RWD 響應式設計 ========== */
+
+/* 手機 (小於 600px) */
+@media (max-width: 600px) {
+    .watch-container {
+        width: 95vw;
+        height: 90px;
+    }
+    .error-text {
+        font-size: 28px;
+        margin-bottom: -15px;
+    }
+    .buttons {
+        font-size: 13px;
+    }
+}
+
+/* 平板 (600px ~ 900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+    .watch-container {
+        width: 80vw;
+        height: 110px;
+    }
+    .error-text {
+        font-size: 38px;
+        margin-bottom: -22px;
+    }
+    .buttons {
+        font-size: 14px;
+    }
+}
+
+/* 桌機 (大於 900px) */
+@media (min-width: 901px) {
+    .watch-container {
+        width: 300px;
+        height: 100px;
+    }
+    .error-text {
+        font-size: 45px;
+        margin-bottom: -30px;
+    }
+    .buttons {
+        font-size: 15px;
+    }
+}
